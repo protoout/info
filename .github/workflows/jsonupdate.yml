@@ -24,14 +24,14 @@ jobs:
       
       # [Setup] npm i
       - name: npm install command
-        run: npm i
+        run: yarn install
 
       # [RUN]  
       - name: Run
-        run: npm run note
-        run: npm run qiita
-        run: npm run news
-        run: npm run codezine
+        run: yarn note
+        run: yarn qiita
+        run: yarn news
+        run: yarn codezine
 
       # git add & git commit
       - name: Commit files
