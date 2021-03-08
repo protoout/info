@@ -3,8 +3,8 @@ name: JSON UPDATE
 
 on:
   schedule:
-    - cron: "55 9 * * *"
-# 1日1回(おそらく)
+    - cron: "55 0 * * *"
+# 1日1回(おそらく) AM:9:55
 
 jobs:
   build:
@@ -29,6 +29,8 @@ jobs:
       # [RUN]  
       - name: Run
         run: npm run note
+        run: npm run qiita
+        run: npm run news
 
       # git add & git commit
       - name: Commit files

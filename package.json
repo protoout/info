@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "note": "node note/index.js",
+    "qiita": "node qiita/index.js",
+    "news": "node news/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,7 +22,7 @@
   "homepage": "https://github.com/protoout/info#readme",
   "dependencies": {
     "axios": "^0.21.1",
-    "puppeteer": "^8.0.0",
+    "csvtojson": "^2.0.10",
     "xml-js": "^1.6.11"
   }
 }
