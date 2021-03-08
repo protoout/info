@@ -24,5 +24,5 @@ const NOTEAPI = `https://note.com/api/v1/layout/magazine/${MAGAZINE_KEY}`;
     
     console.log(output);
 
-    fs.writeFileSync('./public/note.json', JSON.stringify(output));
+    fs.writeFileSync('./docs/note.json', JSON.stringify(output));
 })();
