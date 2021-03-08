@@ -31,6 +31,7 @@ jobs:
         run: npm run note
         run: npm run qiita
         run: npm run news
+        run: npm run codezine
 
       # git add & git commit
       - name: Commit files

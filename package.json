@@ -7,6 +7,7 @@
     "note": "node note/index.js",
     "qiita": "node qiita/index.js",
     "news": "node news/index.js",
+    "codezine": "node codezine/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
