@@ -8,7 +8,7 @@ module.exports = async (URL) => {
 
         const output = items.map(elem => {
             let result = {};
-            result.id = elem.match(/<li id="(.*?)">/)[1];
+            result.id = Number(elem.match(/<li id="(.*?)">/)[1]);
             result.date = elem.match(/class="day">(.*?)<\/div>/)[1];
             const regexp = new RegExp(`<h2><a href="\/article\/detail\/${result.id}">(.*?)<\/a><\/h2>`);
             result.title = elem.match(regexp)[1];
