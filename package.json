@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/protoout/info#readme",
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "puppeteer": "^8.0.0",
+    "xml-js": "^1.6.11"
   }
 }

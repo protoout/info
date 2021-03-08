@@ -1,0 +1,51 @@
+// const puppeteer = require('puppeteer');
+
+// module.exports = async () => {
+//     try {
+//         const QIITA_ORG = `https://qiita.com/organizations/protoout-studio`;        
+//         const browser = await puppeteer.launch({headless: false});
+//         const page = await browser.newPage();
+//         await page.goto(QIITA_ORG);
+
+//         const html = await page.evaluate((selector) => {
+//             const html = document.querySelector(selector);
+//             return html.getInnerHTML();
+//         }, 'div.css-pyp3is');
+
+//         // const tmp = html.match(/に投稿(.*?)に投稿/g);
+//         const tmp = html.split('に投稿');
+
+//         console.log(tmp);
+
+
+
+//         await page.waitForTimeout(20 * 1000);
+        
+//         await browser.close();
+
+
+//         // const res = await axios.get(QIITA_ORG);
+//         // const html = res.data.split(`最近の記事`)[1];
+//         // console.log(html);
+
+//         // console.log
+//         // const pages = res.data.data.magazine_layout.page_layout.section.contents;
+//         // let output = {};
+    
+//         // //インタビュー
+//         // for (let i = 0,len = pages.length; i < len; i++) {
+//         //     const url = `https://note.com/${pages[i].user.urlname}/n/${pages[i].key}?magazine_key=${MAGAZINE_KEY}`
+//         //     output[i] = {
+//         //         id: pages[i].id,
+//         //         url: url,
+//         //         publish_at: pages[i].publish_at,
+//         //         title: pages[i].name,
+//         //         eyecatch: pages[i].eyecatch
+//         //     }
+//         // }
+//         // return output;
+
+//     } catch (error) {
+//         throw new Error(error);
+//     }
+// }
