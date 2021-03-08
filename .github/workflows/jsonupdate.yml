@@ -1,0 +1,45 @@
+
+name: JSON UPDATE
+
+on:
+  schedule:
+    - cron: "55 9 * * *"
+# 1日1回(おそらく)
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [15.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      # [Setup] Node.js v15.x
+      - name: Use Node.js 15.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: "15.x"
+      
+      # [Setup] npm i
+      - name: npm install command
+        run: npm i
+
+      # [RUN]  
+      - name: Run
+        run: npm run note
+
+      # git add & git commit
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Add changes" -a
+
+      # git push
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
