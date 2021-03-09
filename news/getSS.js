@@ -13,6 +13,7 @@ module.exports = async () => {
         }).fromString(res.data);
 
         // console.log(json);
+        json.reverse();
         
         return json;
     } catch (error) {
