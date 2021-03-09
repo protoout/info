@@ -3,7 +3,7 @@ name: JSON UPDATE
 
 on:
   schedule:
-    - cron: "50 17 * * *"
+    - cron: "0 18 * * *"
 # 1日1回(おそらく)
 
 jobs:
@@ -43,3 +43,7 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      # deploy
+      - name: deploy webhook
+        run: curl -X POST -d {} ${{ sercrets.DEPLOY_WEBHOOK_URL }}
