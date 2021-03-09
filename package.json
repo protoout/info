@@ -8,6 +8,7 @@
     "qiita": "node qiita/index.js",
     "news": "node news/index.js",
     "codezine": "node codezine/index.js",
+    "all": "yarn note && yarn qiita && yarn news && yarn codezine",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

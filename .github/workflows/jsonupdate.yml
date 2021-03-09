@@ -28,10 +28,7 @@ jobs:
 
       # [RUN]  
       - name: Run
-        run: yarn note
-        run: yarn qiita
-        run: yarn news
-        run: yarn codezine
+        run: yarn all
 
       # git add & git commit
       - name: Commit files
