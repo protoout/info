@@ -12,9 +12,9 @@ module.exports = async () => {
             output: 'json'
         }).fromString(res.data);
 
-        // console.log(json);
-        json.reverse();
-        
+        const data = json.filter(item => item.date !== '');
+        data.reverse();
+        // console.log(data);
         return json;
     } catch (error) {
         throw new Error(error);
