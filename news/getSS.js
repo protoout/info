@@ -14,9 +14,7 @@ module.exports = async () => {
 
         const data = json.filter(item => item.date !== '');
         data.reverse();
-        // console.log(data);
-        
-        return json;
+        return data;
     } catch (error) {
         throw new Error(error);
     }
