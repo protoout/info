@@ -3,7 +3,7 @@ name: JSON UPDATE
 
 on:
   schedule:
-    - cron: "22 12 * * *"
+    - cron: "46 17 * * *"
 # 1日1回(おそらく)
 
 jobs:
