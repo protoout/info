@@ -8,7 +8,8 @@ const MIJIKA_RENSAI = `https://codezine.jp/article/corner/842`; //「自分自�
     const mijika = await getMagazine(MIJIKA_RENSAI);
 
     const output = {
-        mijika: mijika
+        mijika: mijika,
+        updated: require(`./../common/date`)()
     }
 
     fs.writeFileSync('./docs/codezine.json', JSON.stringify(output));

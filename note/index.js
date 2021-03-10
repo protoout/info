@@ -11,7 +11,8 @@ const MAGAZINE_KEY_ZENTAI = `m03f109eaf0a8`; //プロトアウト学生全体マ
 
     const output = {
         interview: interview,
-        zentai: zentai
+        zentai: zentai,
+        updated: require(`./../common/date`)()
     }
 
     fs.writeFileSync('./docs/note.json', JSON.stringify(output));

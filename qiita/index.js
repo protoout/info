@@ -10,6 +10,7 @@ const getOrg = require(`./getOrg`);
     // return;
 
     const output = {
+        updated: require(`./../common/date`)(),
         zentai: orgPosts
     }
 
